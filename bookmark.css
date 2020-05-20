@@ -11,9 +11,29 @@
 }
 .hamburgerNav{
     display: none;
+    background-color: hsl(231, 69%, 60%);
+    width: 100%;
+    margin-top: 10%;
+    
+}
+.hamburgerNav div a{
+
+   color: white;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    
 }
 .hamburger{
     width: 8%;
+    position: absolute;
+    right: 0;
+    top: 2%;
+}
+.bookmarkheaderlogo{
+    position: absolute;
+    left: 0;
+    top: 2%;
 }
 .container{
     text-align: center;
@@ -56,14 +76,17 @@ p{
     padding: 10px;
     font-weight: 500;
     font-family: 'Rubik', sans-serif;
+    border: 1px solid transparent;
     font-size: 15px;
     margin-bottom: 30%;
 }
-.intro-btn:hover{
-cursor: pointer;
-background-color: hsl(231, 69%, 60%);
+.intro-btn__1{
+    background-color: hsl(231, 69%, 60%);
 border: 1px solid transparent;
 color: white;
+}
+.intro-btn:hover{
+cursor: pointer;
 }
 h3{
     font-family: 'Rubik', sans-serif;
@@ -78,6 +101,7 @@ h3{
 }
 .mobile-nav a{
     text-decoration: none;
+    padding-bottom: 5%;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     color: hsl(229, 8%, 60%);
@@ -96,16 +120,14 @@ h3{
 .desktopFlex{
     position: relative;
 }
-.vl{
-    display: none;
-}
+
 .feature-image{
     width: 90%;
     }
-.feature{
+    #feature-1, #feature-2, #feature-3{
     scroll-snap-align: center;
 }
-.feature button, .ext-card button, .faq-section button{
+#feature-1 button, #feature-2 button, #feature-3 button, .ext-card button, .faq-section button{
    background-color: hsl(231, 69%, 60%);
     color: white;
     border-radius: 5px;
@@ -115,10 +137,10 @@ h3{
     font-size: 15px;
     border: 1px solid transparent;
 }
-.feature button:hover .ext-card button:hover, .faq-section button:hover{
+#feature-1 button:hover, #feature-2 button:hover, #feature-3 button:hover .ext-card button:hover, .faq-section button:hover{
     cursor: pointer;
 }
-.feature button:active, .ext-card button:active, .faq-section button:active{
+#feature-1 button:active, #feature-2 button:active, #feature-3 button:active .ext-card button:active, .faq-section button:active{
     background-color: hsl(229, 31%, 21%);
 }
     .desktoph3{
@@ -128,6 +150,8 @@ h3{
     .carousel{
         overflow-x: scroll;
         scroll-snap-type: x mandatory; 
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
         position: absolute;
         width: 100%;
         top:-20%;
@@ -159,9 +183,7 @@ h3{
     }
   .dots{
       margin: 10% 0 5%;
-  }
-  .answer{
-      display: none;
+      width: 100%;
   }
   .questions{
       margin-bottom: 10%;
@@ -177,8 +199,14 @@ h3{
    font-weight: 300;
    margin: 3% 0;
   }
-  .arrow{
+.arrow1, .arrow2, .arrow3, .arrow4{
       align-self: center;
+  }
+  .arrow1:hover, .arrow2:hover, .arrow3:hover, .arrow4:hover{
+      cursor: pointer;
+  }
+  .answer1, .answer2, .answer3, .answer4{
+      display: none;
   }
   .inputarea{
 margin-top: 20%;
@@ -207,13 +235,19 @@ width: 100%;
 padding: 3% 0 3% 3%;
 border-radius: 5px;
 border: transparent;
+margin-bottom: 0;
 font-family: 'Rubik', sans-serif;
   }
+  .empty-tag{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
   .inputarea-btn{
 width: 100%;
 font-size: 18px;
 border-radius: 5px;
-margin-top: 5%;
+margin-top: 0;
 border: transparent;
 font-family: 'Rubik', sans-serif;
 background-color: hsl(0, 94%, 66%);
@@ -273,12 +307,13 @@ color: hsl(0, 94%, 66%);
          color: hsl(0, 94%, 66%) ;
      }
      .desktopNav button{
-        padding:  1% 5%;
+       padding: 10px 25px;
         font-family: 'Rubik', sans-serif;
         font-size: 18px;
+        border: transparent;
         background-color: hsl(0, 94%, 66%);
         color: white;
-        border-radius: 10px;
+        border-radius: 5px;
      }
      .desktopNav button:hover{
          cursor: pointer;
@@ -339,40 +374,40 @@ color: hsl(0, 94%, 66%);
     margin-bottom: 0;
     justify-content: space-around;
 }
+.mobile-nav a{   
+    border-bottom: 4px solid grey;   
+}
+.mobile-nav a:hover{
+    color: hsl(229, 31%, 21%);
+    border-bottom: 4px solid hsl(0, 94%, 66%);
+}
 .features-section hr{
     display: none;
-}
-.vl{
-    width: 100%;
-    display: block;
-    margin-top: 10%;
-    border-bottom: 4px solid grey;
-}
-.vl:hover{
-    cursor: pointer;
-    border-bottom: 4px solid hsl(0, 94%, 66%); 
 }
 .desktopFlex{
     margin-top: 0;
     padding-top: 0;
     position: relative;   
 }
-.feature{
+#feature-1, #feature-2, #feature-3{
     display: flex;
     justify-content: space-around;
     margin-bottom: 5%;
     padding: 0 10%;
 }
-.feature button:hover{
+#feature-1 button:hover, #feature-2 button:hover, #feature-3 button:hover{
     cursor: pointer;
 }
-.feature button:active{
+#feature-1 button:active, #feature-2 button:active, #feature-3 button:active{
     background-color: hsl(229, 31%, 21%);
 }
-.feature div{
+#feature-1, #feature-2, #feature-3 div{
     align-self: center;
     text-align: start;
     margin-left: 15%;
+}
+#feature-1 .feature-image, #feature-2 .feature-image{
+    margin-right: 25%;
 }
 .feature-image{
     width: 25%;
@@ -381,7 +416,7 @@ color: hsl(0, 94%, 66%);
 .desktoph3{
     margin-top: 5%;
 }
-.feature p{
+#feature-1 p, #feature-2 p, #feature-3 p{
     text-align: start;    
 }
 .box__2{
@@ -393,6 +428,10 @@ color: hsl(0, 94%, 66%);
 }
 .carousel{
   top: -55%;  
+  left: -5%;
+}
+.carousel::-webkit-scrollbar{
+    background: transparent;
 }
 .ext-section{
     margin-top: 5%; 
@@ -470,6 +509,10 @@ width: 40%;
 font-size: 18px;
 border-radius: 5px;
 border: transparent;
+font-family: 'Rubik', sans-serif;
+}
+.empty-p{
+color: white;
 font-family: 'Rubik', sans-serif;
 }
 .footer{
